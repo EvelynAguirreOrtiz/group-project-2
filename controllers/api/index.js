@@ -1,9 +1,9 @@
 const router = require("express").Router();
 
-// UPDATE THESE AS NEEDED
+const userRoutes = require("./user-routes");
+// TODO: ADD ANY OTHER MODEL ROUTES HERE
 
-// const userRoutes = require("./user-routes");
-
-// router.use("/users", userRoutes);
+router.use("/users", userRoutes);
+// TODO: ADD ANY OTHER ROUTER.USE CODE HERE
 
 module.exports = router;

@@ -1,8 +1,8 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-// const { MODELS GO HERE } = require("../models");
 const withAuth = require("../utils/auth");
+// const { MODELS GO IN HERE } = require("../models");
 
-// code goes here
+// TODO: ADD DASHNOARD ROUTES HERE
 
 module.exports = router;

@@ -1,5 +1,7 @@
-const ModelName = require("./ModelName");
+const User = require("./User");
+// TODO: ADD OTHER MODEL NAMES HERE
 
-// associations go here
+// TODO: ADD ASSOCIATION CODE HERE
 
-module.exports = { ModelName(s) };
+// TODO: DON"T FORGET TO INCLUDE ALL MODEL NAMES IN {}
+module.exports = { User };
