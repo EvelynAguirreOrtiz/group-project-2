@@ -3,28 +3,34 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PROJECT 2</title>
-		{{! TODO: LINK TO STYLESHEETS HERE }}
-		{{! <link rel="stylesheet" href="/stylesheets/style.css" /> }}
+		<title>Project 2</title>
+		<link rel="stylesheet" href="/stylesheets/style.css" />
+		{{! TODO: DON'T FORGET TO ADD ANY OTHER STYLESHEETS HERE }}
 	</head>
 
 	<body>
 		<div class="wrapper">
 			<header>
-				<h1>
-					<a href="/">PROJECT 2</a>
-				</h1>
+				<h1><a href="/">Project 2</a><span>
+						<h2 class="subtitle">Let's Meet Up!</h2></span></h1>
 				<nav>
 					{{#if loggedIn}}
-						<a href="/dashboard">Dashboard</a>
-						<button id="logout" class="btn-no-style">logout</button>
+						<a href="/dashboard">Create/Edit Posts</a>
+						<button id="logout" class="btn-no-style">Logout</button>
 					{{else}}
-						<a href="/login">login</a>
+						<a href="/login" id="login">Login/Sign Up<h6>(you must be logged in
+								to leave a comment)</h6></a>
 					{{/if}}
 				</nav>
+
 			</header>
 			<main>
 				{{{body}}}
+
+				{{! TODO: DELETE THIS LINE }}
+				ALL POSTS WILL SHOW UP HERE (don't forget to delete this line!!!!!) User
+				must log in to comment or add posts
+
 			</main>
 			<footer>
 				Thanks for visiting!
