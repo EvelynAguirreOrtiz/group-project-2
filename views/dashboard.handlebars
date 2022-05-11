@@ -1,3 +1,4 @@
+{{!-- New post creation page (requires login) --}}
 <section>
   <h2>Create New Post:</h2>
 
@@ -21,7 +22,9 @@
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
+      {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit This Post</a> --}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit This Post</a>
+    
     </li>
     {{/each}}
   </ol>
