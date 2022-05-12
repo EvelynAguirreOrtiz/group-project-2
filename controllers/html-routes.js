@@ -82,23 +82,11 @@ router.get("/post/:id", (req, res) => {
 });
 
 router.get("/events", (req, res) => {
-	// res.render("/events");
-
-	if (req.session.loggedIn) {
-		res.redirect("/");
-		return;
-	}
-	res.render("login");
+	res.render("events");
 });
 
 router.get("/friends", (req, res) => {
-	// res.render("/friends");
-
-	if (req.session.loggedIn) {
-		res.redirect("/");
-		return;
-	}
-	res.render("login");
+	res.render("friends");
 });
 
 // make sure user is logged in
