@@ -1,8 +1,6 @@
 async function editFormHandler(event) {
 	event.preventDefault();
 
-	// const title = document.querySelector('input[name="post-title"]').value.trim();
-
 	const post_text = document
 		.querySelector('textarea[name="post-text"]')
 		.value.trim();
@@ -22,7 +20,6 @@ async function editFormHandler(event) {
 	});
 
 	if (response.ok) {
-		// document.location.replace("/dashboard/");
 		document.location.replace("/dashboard/");
 	} else {
 		alert(response.statusText);

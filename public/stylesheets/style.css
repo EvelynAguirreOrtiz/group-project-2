@@ -10,7 +10,8 @@ html {
 	margin: auto;
 	font-family: sans-serif;
 	color: #333;
-	/* background-color: #fefbd8; */
+	/* background-image: url("/assets/images/hands-w-phone.jpg");
+	background-size: contain; */
 }
 
 header {
@@ -69,6 +70,10 @@ h6 {
 #login {
 	font-size: 20px;
 	color: #4040a1;
+}
+
+.landing-link {
+	font-size: 25px;
 }
 
 .post {
@@ -186,7 +191,7 @@ main {
 }
 
 .comment .meta {
-	font-size: 90%;
+	font-size: 10px;
 	margin-bottom: 0.5%;
 	opacity: 0.6;
 }
