@@ -6,4 +6,12 @@ test("format_date() returns a date string", () => {
 	expect(format_date(date)).toBe("3/20/2020");
 });
 
+test("format_plural() returns a pluralized word", () => {
+	const word1 = format_plural("tiger", 1);
+	const word2 = format_plural("lion", 2);
+
+	expect(word1).toBe("tiger");
+	expect(word2).toBe("lions");
+});
+
 // TODO: ADD ANY OTHER TESTS HERE AND DON"T FORGET TO INSERT VARIABLE INTO {} ABOVE

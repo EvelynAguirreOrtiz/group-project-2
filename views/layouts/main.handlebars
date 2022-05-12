@@ -1,39 +1,97 @@
+{{! Main page template }}
+
 <html lang="en">
 
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>PROJECT 2</title>
-		{{! TODO: LINK TO STYLESHEETS HERE }}
-		{{! <link rel="stylesheet" href="/stylesheets/style.css" /> }}
-	</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meet Up SATX</title>
+    {{!-- <link rel="stylesheet" href="/stylesheets/style.css" /> --}}
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.8.1/cyborg/bulmaswatch.min.css"
+      integrity="sha512-a4FEuCXHSbNqzAten4lPl5BPgDqOL+yHPg5AWcBRdpBHRVrFfKZ2/cYKnFKRctX1Udaal4E8cchB0+yXnkaPhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-	<body>
-		<div class="wrapper">
-			<header>
-				<h1>
-					<a href="/">PROJECT 2</a>
-				</h1>
-				<nav>
-					{{#if loggedIn}}
-						<a href="/dashboard">Dashboard</a>
-						<button id="logout" class="btn-no-style">logout</button>
-					{{else}}
-						<a href="/login">login</a>
-					{{/if}}
-				</nav>
-			</header>
-			<main>
-				{{{body}}}
-			</main>
-			<footer>
-				Thanks for visiting!
-			</footer>
-		</div>
+    {{! TODO: DON'T FORGET TO ADD ANY OTHER STYLESHEETS HERE }}
+  </head>
 
-		{{#if loggedIn}}
-			<script src="/javascript/logout.js"></script>
-		{{/if}}
-	</body>
+  <body>
+
+<section class="hero is-info">
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="hero-head">
+          <p class="title is-1"><a href="/">Meet Up SATX</a></p>
+          <p class="subtitle">Let's Meet Up!</p>
+          <span class="navbar-burger" data-target="navbarMenuHeroB">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroB" class="navbar-menu">
+          <div class="navbar-end">
+            {{#if loggedIn}}
+              {{! <a href="/dashboard">Create/Edit Posts</a> }}
+              <a class="navbar-item" href="/dashboard" class="button is-link is-inverted is-outlined">Create/Edit Posts</a>
+              <button id="logout" class="button is-link is-inverted is-outlined">Logout</button>
+            {{else}}
+              <a class="button is-link is-inverted is-outlined" href="/login" id="login">Login | Sign Up</a>
+            {{/if}}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</section>
+
+    {{!-- <section class="hero is-info is-large">
+      <div class="hero-head">
+        <p class="title is-1"><a href="/">Meet Up SATX</a><span>
+        </p>
+        <p class="subtitle">Let's Meet Up!</h2></span>
+        </p>
+      </div>
+    </section> --}}
+    {{!-- {{!-- <div class="wrapper">
+      <header class="hero">
+        <h1 class="title is-1"><a href="/">Meet Up SATX</a><span>
+            <h2 class="subtitle">Let's Meet Up!</h2></span></h1> --}}
+        <nav class="navbar" role="navigation">
+          {{#if loggedIn}}
+            {{! <a href="/dashboard">Create/Edit Posts</a> }}
+            <a class="navbar-item" href="/dashboard">Create/Edit Posts</a>
+
+            <button id="logout" class="button is-primary">Logout</button>
+          {{else}}
+            <a href="/login" id="login">Login/Sign Up<h6>(you must be logged in
+                to leave a comment)</h6></a>
+          {{/if}}
+        </nav>
+
+      </header> --}}
+      <main>
+
+        {{{body}}}
+
+      </main>
+      <footer>
+        Thanks for visiting!
+      </footer>
+    </div>
+
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+
+  </body>
 
 </html>
