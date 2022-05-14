@@ -2,93 +2,93 @@
 
 <html lang="en">
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Meet Up SATX</title>
-    <link rel="stylesheet" href="../../public/stylesheets/style.css" />
-    {{!stylesheet for bulma}}
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
-    />
-    {{!stylesheet for bulmaswatch theme: cyborg}}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.8.1/cyborg/bulmaswatch.min.css"
-      integrity="sha512-a4FEuCXHSbNqzAten4lPl5BPgDqOL+yHPg5AWcBRdpBHRVrFfKZ2/cYKnFKRctX1Udaal4E8cchB0+yXnkaPhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    {{!script to add font awesome icons}}
-    <script
-      src="https://kit.fontawesome.com/6968da061b.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Meet Up SATX</title>
+		<link rel="stylesheet" href="../../public/stylesheets/style.css" />
+		{{!stylesheet for bulma}}
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"
+		/>
+		{{!stylesheet for bulmaswatch theme: cyborg}}
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/bulmaswatch/0.8.1/cyborg/bulmaswatch.min.css"
+			integrity="sha512-a4FEuCXHSbNqzAten4lPl5BPgDqOL+yHPg5AWcBRdpBHRVrFfKZ2/cYKnFKRctX1Udaal4E8cchB0+yXnkaPhg=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		{{!script to add font awesome icons}}
+		<script
+			src="https://kit.fontawesome.com/6968da061b.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
 
-  <body>
+	<body>
 
-    <section class="hero is-link">
-      <div class="hero-body">
-        <nav class="navbar">
-          <div class="container">
-            <div class="hero-head">
-              <p class="title is-1"><a href="/">Meet Up SATX</a></p>
-              <p class="subtitle">Get to know San Antonio - created by locals
-                for you
-              </p>
-              <span class="navbar-burger" data-target="navbarMenuHeroB">
-                <span></span>
-                <span></span>
-                <span></span>
-              </span>
-            </div>
-            <div id="navbarMenuHeroB" class="navbar-menu">
-              <div class="navbar-end">
-                {{#if loggedIn}}
-                  <a
-                    class="button is-link is-inverted is-outlined"
-                    href="/dashboard"
-                    class="button is-link is-inverted is-outlined"
-                  >Create | Edit Posts</a>
-                  <a
-                    id="logout"
-                    class="button is-link is-inverted is-outlined"
-                  >Logout</a>
-                {{else}}
-                  <a
-                    class="button is-link is-inverted is-outlined"
-                    href="/login"
-                    id="login"
-                  >Login | Sign Up</a>
-                {{/if}}
-              </div>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </section>
+		<section class="hero is-link">
+			<div class="hero-body">
+				<nav class="navbar">
+					<div class="container">
+						<div class="hero-head">
+							<p class="title is-1"><a href="/">Meet Up SATX</a></p>
+							<p class="subtitle">Get to know San Antonio - created by locals
+								for you
+							</p>
+							<span class="navbar-burger" data-target="navbarMenuHeroB">
+								<span></span>
+								<span></span>
+								<span></span>
+							</span>
+						</div>
+						<div id="navbarMenuHeroB" class="navbar-menu">
+							<div class="navbar-end">
+								{{#if loggedIn}}
+									<a
+										class="button is-link is-inverted is-outlined"
+										href="/dashboard"
+										class="button is-link is-inverted is-outlined"
+									>Create | Edit Posts</a>
+									<a
+										id="logout"
+										class="button is-link is-inverted is-outlined"
+									>Logout</a>
+								{{else}}
+									<a
+										class="button is-link is-inverted is-outlined"
+										href="/login"
+										id="login"
+									>Login | Sign Up</a>
+								{{/if}}
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</section>
 
-    <main>
+		<main>
 
-      {{{body}}}
+			{{{body}}}
 
-    </main>
+		</main>
 
-    <footer class="footer">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Thanks for visiting!</strong>
-          E.M.A&#8482;
-        </p>
-      </div>
-    </footer>
+		<footer class="footer">
+			<div class="content has-text-centered">
+				<p>
+					<strong>Thanks for visiting!</strong>
+					E.M.A&#8482;
+				</p>
+			</div>
+		</footer>
 
-    {{#if loggedIn}}
-      <script src="/javascript/logout.js"></script>
-    {{/if}}
+		{{#if loggedIn}}
+			<script src="/javascript/logout.js"></script>
+		{{/if}}
 
-  </body>
+	</body>
 
 </html>
