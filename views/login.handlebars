@@ -1,34 +1,78 @@
 {{! This is the login page }}
 <form class="login-form">
-  <div>
-    <label for="email-login">email:</label>
-    <input type="text" id="email-login" />
+<div class="columns login-form box">
+  <div class="column">
+    <div class="field">
+      <label class="label" for="email-login">email:</label>
+      <p class="control has-icons-left">
+        <input
+          class="input is-link"
+          type="text"
+          id="email-login"
+          placeholder="Email"
+        />
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <label class="label" for="password-login">password:</label>
+      <p class="control has-icons-left">
+        <input class="input is-link password-login" type="password" id="password-login" />
+        <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button type="submit" class="button">login</button>
+      </p>
+    </div>
   </div>
-  <div>
-    <label for="password-login">password:</label>
-    <input type="password" id="password-login" />
-  </div>
-  <div>
-    <button type="submit" class="button">login</button>
-  </div>
+</div>
 </form>
 
 <form class="signup-form">
-  <div>
-    <label for="username-signup">username:</label>
-    <input type="text" id="username-signup" />
+<div class="columns signup-form box">
+  <div class="column">
+    <div class="field">
+      <label class="label" for="username-signup">username:</label>
+      <p class="control has-icons-left">
+        <input class="input is-link username-signup" type="text" id="username-signup" />
+        <span class="icon is-small is-left">
+          <i class="fa-solid fa-user"></i>
+          </i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <label class="label" for="email-signup">email:</label>
+      <p class="control has-icons-left">
+        <input class="input is-link email-signup" type="email" id="email-signup" />
+        <span class="icon is-small is-left">
+          <i class="fas fa-envelope"></i>
+          </i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <label class="label" for="password-signup">password:</label>
+      <p class="control has-icons-left">
+        <input class="input is-link password-signup" type="password" id="password-signup" />
+        <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+        </span>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button type="submit" class="button">sign up</button>
+      </p>
+    </div>
   </div>
-  <div>
-    <label for="email-signup">email:</label>
-    <input type="text" id="email-signup" />
-  </div>
-  <div>
-    <label for="password-signup">password:</label>
-    <input type="password" id="password-signup" />
-  </div>
-  <div>
-    <button type="submit">signup</button>
-  </div>
+</div>
 </form>
 
 <script src="/javascript/login.js"></script>
