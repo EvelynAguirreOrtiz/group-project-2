@@ -83,11 +83,9 @@ router.get("/post/:id", (req, res) => {
 
 router.get("/events", (req, res) => {
 	if (req.session.loggedIn) {
-		// res.redirect("/");
 		res.render("events");
 		return;
 	}
-	// res.render("events");
 	res.render("login");
 });
 
@@ -97,6 +95,10 @@ router.get("/friends", (req, res) => {
 		return;
 	}
 	res.render("login");
+});
+
+router.get("/privacy-policy", (req, res) => {
+	res.render("privacy-policy");
 });
 
 // make sure user is logged in
