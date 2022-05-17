@@ -82,16 +82,16 @@ router.get("/post/:id", (req, res) => {
 });
 
 router.get("/events", (req, res) => {
-	if (req.session.loggedIn) {
-		res.render("events");
-		return;
-	}
-	res.render("login");
+  if (req.session.loggedIn) {
+   res.render("events", { loggedIn: true });
+    return;
+  }
+  res.render("login");
 });
 
 router.get("/friends", (req, res) => {
 	if (req.session.loggedIn) {
-		res.render("friends");
+		res.render("friends", { loggedIn: true });
 		return;
 	}
 	res.render("login");
