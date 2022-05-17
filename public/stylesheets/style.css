@@ -152,3 +152,22 @@ a.subtitle {
 #comment-text {
   margin: 20 10 20 10;
 }
+
+.float-container {
+  display: flex;
+  max-width: 100%;
+  align-self: center;
+}
+
+.photo-wall img {
+  float: left;
+  max-width: 25%;
+  margin: 10 10 10 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.photo-wall-2 img {
+  max-width: 25%;
+  margin: 10 10 10 10;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
