@@ -1,15 +1,19 @@
 {{!-- this is page where users can leave comments on a chosen post --}}
+<a href="/posts"> &larr; Back to Community Wall</a>
+<section class="container">
+
+
 {{> post-info post }}
 
 {{#if loggedIn}}
 	<form class="comment-form">
-		<div>
+		<div class="field">
 			{{!-- <textarea name="comment-body"></textarea> --}}
-      <textarea id="comment-body" name="comment-body" rows="10" cols="75"></textarea>
+      <textarea id="comment-body" name="comment-body" class="textarea is-medium is-link"></textarea>
 		</div>
 
-		<div>
-			<button type="submit">Add Comment</button>
+		<div class="field">
+			<button type="submit" class="button comment-form"> add comment</button>
 		</div>
 	</form>
 {{/if}}
@@ -20,3 +24,5 @@
 {{#if loggedIn}}
 	<script src="/javascript/comment.js"></script>
 {{/if}}
+
+</section>
