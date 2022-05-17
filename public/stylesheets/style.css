@@ -8,7 +8,7 @@ html {
   min-height: 100%;
 }
 main {
-  min-height: 80%;
+  min-height: 83%;
 }
 #canvas-complex {
   position: absolute;
@@ -71,6 +71,14 @@ div.polaroid {
   background: rgb(245, 247, 247, 0.6);
 }
 
-.title .subtitle {
-  color: rgb(205, 129, 228);
+p.title {
+  color: rgb(190, 91, 220);
+}
+
+#event-calendar-container {
+  align-items: center;
+}
+
+#event-calendar {
+  align-self: center;
 }
