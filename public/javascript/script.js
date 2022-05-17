@@ -2,6 +2,9 @@ var granimInstance = new Granim({
   element: "#canvas-complex",
   direction: "left-right",
   isPausedWhenNotInView: true,
+  image: {
+    stretchMode: ["stretch", "stretch-if-bigger"],
+  },
   states: {
     "default-state": {
       gradients: [
