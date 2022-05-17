@@ -83,7 +83,12 @@ router.get("/post/:id", (req, res) => {
 
 router.get("/events", withAuth, (req, res) => {
 	if (req.session.loggedIn) {
-		res.render("events");
+		// res.render("events");
+		// return;
+		res.render("events", {
+			// post,
+			loggedIn: true,
+		});
 		return;
 	}
 	res.render("login");
@@ -91,7 +96,11 @@ router.get("/events", withAuth, (req, res) => {
 
 router.get("/friends", withAuth, (req, res) => {
 	if (req.session.loggedIn) {
-		res.render("friends");
+		// res.render("friends");
+		res.render("friends", {
+			// post,
+			loggedIn: true,
+		});
 		return;
 	}
 	res.render("login");
