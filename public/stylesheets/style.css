@@ -7,9 +7,11 @@
 html {
   min-height: 100%;
 }
+
 main {
-  min-height: 83%;
+  min-height: 100%;
 }
+
 #canvas-complex {
   position: absolute;
   display: block;
