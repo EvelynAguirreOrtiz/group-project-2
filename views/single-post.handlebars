@@ -1,14 +1,13 @@
 {{!-- this is page where users can leave comments on a chosen post --}}
 <a href="/posts"> &larr; Back to Community Wall</a>
-<section class="container">
 
+<section class="container">
 
 {{> post-info post }}
 
 {{#if loggedIn}}
 	<form class="comment-form">
 		<div class="field">
-			{{!-- <textarea name="comment-body"></textarea> --}}
       <textarea id="comment-body" name="comment-body" class="textarea is-medium is-link"></textarea>
 		</div>
 

@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
+const withAuth = require("../utils/auth");
 
 router.get("/", (req, res) => {
 	res.render("landingpage");
@@ -29,7 +30,6 @@ router.get("/posts", (req, res) => {
 			const posts = dbPostData.map((post) => post.get({ plain: true }));
 
 			res.render("posts", {
-				// res.render("postpage", {
 				posts,
 				loggedIn: req.session.loggedIn,
 			});
@@ -81,7 +81,7 @@ router.get("/post/:id", (req, res) => {
 		});
 });
 
-router.get("/events", (req, res) => {
+router.get("/events", withAuth, (req, res) => {
 	if (req.session.loggedIn) {
 		res.render("events");
 		return;
@@ -89,7 +89,7 @@ router.get("/events", (req, res) => {
 	res.render("login");
 });
 
-router.get("/friends", (req, res) => {
+router.get("/friends", withAuth, (req, res) => {
 	if (req.session.loggedIn) {
 		res.render("friends");
 		return;

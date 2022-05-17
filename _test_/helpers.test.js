@@ -13,5 +13,3 @@ test("format_plural() returns a pluralized word", () => {
 	expect(word1).toBe("tiger");
 	expect(word2).toBe("lions");
 });
-
-// TODO: ADD ANY OTHER TESTS HERE AND DON"T FORGET TO INSERT VARIABLE INTO {} ABOVE
