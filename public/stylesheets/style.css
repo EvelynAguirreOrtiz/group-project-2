@@ -8,7 +8,11 @@ html {
   min-height: 100%;
 }
 
+<<<<<<< HEAD
 main {
+=======
+body {
+>>>>>>> feature/amanda
   min-height: 100%;
 }
 
@@ -46,6 +50,7 @@ main {
   border: 3px solid #fff;
   display: flex;
   background: rgb(245, 247, 247, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   max-width: 100%;
   align-self: center;
 }
@@ -71,16 +76,29 @@ div.polaroid {
   border: 3px solid #fff;
   align-content: center;
   background: rgb(245, 247, 247, 0.6);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 p.title {
-  color: rgb(190, 91, 220);
+  color: rgb(79, 131, 243);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-#event-calendar-container {
-  align-items: center;
+a.subtitle {
+  color: rgb(13, 2, 15);
 }
 
-#event-calendar {
+#individual-post {
+  margin: 10 10 10 10;
+  border: 2px solid #fff;
+  background: rgb(245, 247, 247, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.posts-page div {
   align-self: center;
+}
+
+#comment-text {
+  margin: 20 10 20 10;
 }
