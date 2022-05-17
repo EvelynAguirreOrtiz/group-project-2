@@ -11,5 +11,4 @@ module.exports = {
 
 		return word;
 	},
-	// TODO: ADD ANY OTHER CODE HERE (IF NEEDED)
 };

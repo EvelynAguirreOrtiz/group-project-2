@@ -8,7 +8,7 @@ html {
   min-height: 100%;
 }
 main {
-  min-height: 75%;
+  min-height: 80%;
 }
 #canvas-complex {
   position: absolute;
@@ -22,28 +22,9 @@ main {
   z-index: -1;
 }
 
-div.polaroid {
-  position: absolute;
-  top: 0px;
-  right: 180;
-  width: 40%;
-  background-color: white;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#alamodome.img {
-  width: auto;
-}
-
-#mission-container {
-  background: rgb(245, 247, 247, 0.4);
-  position: relative;
-  left: -160px;
-}
-
 #mission-statement {
-  text-align: center;
   padding: 10px 20px;
+  text-align: justify;
   font-size: xx-large;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
@@ -51,4 +32,45 @@ div.polaroid {
 #Home-Text {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 60px;
+  color: #ffffff;
+}
+
+.main-text {
+  color: rgb(214, 214, 214);
+  font-size: xx-large;
+}
+
+.float-container {
+  border: 3px solid #fff;
+  display: flex;
+  background: rgb(245, 247, 247, 0.2);
+  max-width: 100%;
+  align-self: center;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+div.polaroid {
+  max-width: auto;
+  max-width: auto;
+  object-fit: cover;
+  text-align: center;
+}
+
+#alamodome {
+  max-width: 50%;
+  max-width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#info-box {
+  border: 3px solid #fff;
+  align-content: center;
+  background: rgb(245, 247, 247, 0.6);
+}
+
+.title .subtitle {
+  color: rgb(205, 129, 228);
 }
