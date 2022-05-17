@@ -1,213 +1,84 @@
 * {
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body,
 html {
-	height: 100%;
-	width: 100vw;
-	padding: auto;
-	margin: auto;
-	font-family: sans-serif;
-	color: #333;
-	/* background-image: url("/assets/images/hands-w-phone.jpg");
-	background-size: contain; */
+  min-height: 100%;
 }
-
-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	margin: auto;
-	padding: 0 5%;
-	border-bottom: #36486b 1px solid;
-}
-
-header h1 a {
-	font-size: 45px;
-	font-weight: bolder;
-	/* text-shadow: 1px 1px #fefbd8; */
-}
-
-a {
-	text-decoration: none;
-	color: #4040a1;
-	/* color: #20407f; */
-	font-weight: bold;
-	transition: color 0.1s;
-}
-
-a:hover {
-	color: #4040a1;
-}
-
-button {
-	background-color: #4040a1;
-	border: 0;
-	padding: 1%;
-	color: white;
-	font-weight: bold;
-	transition: background-color 0.1s;
-	cursor: pointer;
-	border-radius: 5px;
-}
-
-button:hover {
-	background-color: #3486eb;
-}
-
-h6 {
-	margin: 10px 0;
-}
-
-.subtitle {
-	font-size: 20px;
-	text-align: left;
-	color: black;
-}
-
-#login {
-	font-size: 20px;
-	color: #4040a1;
-}
-
-.landing-link {
-	font-size: 25px;
-}
-
-.post {
-	border-bottom: #36486b 1px solid;
-	margin: 10px;
-	padding: 20px;
-}
-
-.post-list {
-	margin: 20px;
-	padding: 20 px;
-}
-
-textarea,
-input {
-	padding: 0.5%;
-	border-radius: 5px;
-	border: 1px solid #ccc;
-}
-
-textarea:focus,
-input:focus {
-	outline: none;
-	border: 1px solid #3486eb;
-}
-
-textarea {
-	min-width: 40%;
-	min-height: 100px;
-}
-
-form > div {
-	margin-bottom: 2%;
-}
-
-form label {
-	display: block;
-}
-
-.wrapper {
-	width: 100%;
-	min-height: 100%;
-	max-width: 1200px;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: column;
-}
-
 main {
-	flex: 1;
-	padding: 2% 4%;
+  min-height: 83%;
+}
+#canvas-complex {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
 }
 
-.btn-no-style {
-	background: none;
-	border: none;
-	padding: 0;
-	cursor: pointer;
-	text-decoration: none;
-	color: #4040a1;
-	font-size: 100%;
-	font-weight: bold;
-	transition: color 0.1s;
-	margin-left: 16px;
+#mission-statement {
+  padding: 10px 20px;
+  text-align: justify;
+  font-size: xx-large;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.btn-no-style:hover {
-	background: none;
-	color: #3486eb;
+#Home-Text {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 60px;
+  color: #ffffff;
 }
 
-.delete-post-btn {
-	background-color: #d41414;
+.main-text {
+  color: rgb(214, 214, 214);
+  font-size: xx-large;
 }
 
-.delete-post-btn:hover {
-	background-color: #ff643d;
+.float-container {
+  border: 3px solid #fff;
+  display: flex;
+  background: rgb(245, 247, 247, 0.2);
+  max-width: 100%;
+  align-self: center;
 }
 
-.post {
-	margin-bottom: 2%;
-	line-height: 150%;
+.flex-child:first-child {
+  margin-right: 20px;
 }
 
-.post .title a {
-	text-decoration: none;
-	color: #4040a1;
-	font-weight: bold;
-	font-size: 20px;
-	transition: color 0.1s;
+div.polaroid {
+  max-width: auto;
+  max-width: auto;
+  object-fit: cover;
+  text-align: center;
 }
 
-.post .title p {
-	font-style: italic;
-	font-size: 15px;
-	color: #7d7d7d;
+#alamodome {
+  max-width: 50%;
+  max-width: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.edit-link {
-	display: block;
-	margin: -1.5% 0 2% 0;
+#info-box {
+  border: 3px solid #fff;
+  align-content: center;
+  background: rgb(245, 247, 247, 0.6);
 }
 
-.comment-form {
-	margin-bottom: 5%;
+p.title {
+  color: rgb(190, 91, 220);
 }
 
-.comment {
-	padding: 1%;
-	margin-bottom: 1%;
+#event-calendar-container {
+  align-items: center;
 }
 
-.comment:nth-child(odd) {
-	background-color: #fff5eb;
-}
-
-.comment .meta {
-	font-size: 10px;
-	margin-bottom: 0.5%;
-	opacity: 0.6;
-}
-
-.new-post-form input {
-	width: 300px;
-}
-
-.edit-post-form {
-	margin-bottom: 5%;
-}
-
-footer {
-	border-top: 1px solid #ccc;
-	display: flex;
-	justify-content: center;
-	padding: 1%;
-	font-size: 110%;
+#event-calendar {
+  align-self: center;
 }

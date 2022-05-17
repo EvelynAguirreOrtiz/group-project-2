@@ -1,28 +1,42 @@
 {{!-- New post creation page (requires login) --}}
-<section>
-  <h2>Create New Post:</h2>
+  <a href="/posts"> &larr; Back to Community Wall</a>
 
-  <form class="new-post-form">
-    <div>
-      <label for="post-title">Title</label>
-      <input type="text" id="post-title" name="post-title" />
+<form class="new-post-form">
+<section class="container new-post-form">
+    <div class="field">
+      <label class="label" for="post-title">title:</label>
+      <p class="control has-icons-left">
+        <input
+          class="input is-link"
+          type="text"
+          id="post-title"
+          name="post-title"
+          placeholder="Finally have freetime! Let's hang"
+        />
+      </p>
     </div>
-    <div>
-      <label for="post-text">Your Post</label>
-      <textarea id="post-text" name="post-text" rows="15" cols="75"></textarea>
+    <div class="field">
+      <label class="label" for="post-text">your post:</label>
+      <p class="control has-icons-left">
+        <textarea  class="textarea is-medium is-link post-text" name="post-text" id="post-text"></textarea>
+      </p>
     </div>
-    <button type="submit" class="btn">Add Post</button>
-  </form>
+    <div class="field">
+      <p class="control">
+        <button type="submit" class="button new-post-form"> add post</button>
+      </p>
+    </div>
 </section>
+</form>
 
 {{#if posts.length}}
-<section>
-  <h2>Your Posts:</h2>
+
+<section class="container">
+  <label class="label" for="post-text">your posts:</label>
   <ol>
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      {{!-- <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit This Post</a> --}}
       <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit This Post</a>
     
     </li>
