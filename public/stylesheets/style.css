@@ -81,7 +81,9 @@ p.title {
 }
 
 a.subtitle {
-  color: rgb(13, 2, 15);
+  color: rgb(115, 110, 110);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
 }
 
 #individual-post {
@@ -102,16 +104,16 @@ a.subtitle {
 }
 
 .chat_container {
-  border: 2px solid #570a0a;
-  background-color: #8c1e99;
+  background: rgba(217, 86, 228, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
 }
 
 .darker {
-  border-color: rgb(166, 78, 78);
-  background-color: rgb(58, 109, 152);
+  background: rgba(243, 166, 33, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .chat_container::after {

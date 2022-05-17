@@ -32,16 +32,18 @@
 {{#if posts.length}}
 
 <section class="container">
+  <div class="field">
   <label class="label" for="post-text">your posts:</label>
+  </div>
   <ol>
     {{#each posts as |post|}}
     <li>
       {{> post-info post}}
-      <a href="/dashboard/edit/{{post.id}}" class="edit-link">Edit This Post</a>
-    
+      <a href="/dashboard/edit/{{post.id}}" class="button edit-link">edit this post</a>
     </li>
     {{/each}}
   </ol>
+  <br/>
 </section>
 {{/if}}
 
