@@ -76,14 +76,16 @@ div.polaroid {
 }
 
 p.title {
-  color: rgb(79, 131, 243);
+  color: rgb(212, 83, 224);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-a.subtitle {
-  color: rgb(115, 110, 110);
+a.subtitle,
+h4.subtitle {
+  color: rgb(97, 97, 251);
+  text-shadow: 0 0 10px rgba(227, 214, 198, 0.632);
   font-family: Arial, Helvetica, sans-serif;
-  font-weight: 200;
+  font-weight: bolder;
 }
 
 #individual-post {
@@ -162,4 +164,33 @@ a.subtitle {
 }
 img {
   width: 100%;
+}
+
+/* .container-image {
+  max-width: 25%;
+  max-height: 25%;
+} */
+
+.foodie-pic {
+  max-width: 100%;
+  max-width: 100%;
+  border-radius: #ffffff 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.foodie-image {
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#foodie-1 {
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  margin-left: auto;
+  margin-right: auto;
 }
