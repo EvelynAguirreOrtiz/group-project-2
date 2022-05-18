@@ -76,12 +76,30 @@ div.polaroid {
 }
 
 p.title {
-  color: rgb(79, 131, 243);
+  color: rgb(189, 21, 205);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 a.subtitle {
-  color: rgb(13, 2, 15);
+  color: rgb(48, 48, 206);
+  text-shadow: 0 0 10px rgba(227, 214, 198, 0.632);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+#foodie-1.label {
+  color: rgb(40, 120, 225);
+  text-shadow: 0 0 10px rgba(227, 214, 198, 0.632);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+h4.subtitle {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(227, 214, 198, 0.632);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  align-self: center;
 }
 
 #individual-post {
@@ -102,16 +120,16 @@ a.subtitle {
 }
 
 .chat_container {
-  border: 2px solid #570a0a;
-  background-color: #8c1e99;
+  background: rgba(217, 86, 228, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   padding: 10px;
   margin: 10px 0;
 }
 
 .darker {
-  border-color: rgb(166, 78, 78);
-  background-color: rgb(58, 109, 152);
+  background: rgba(243, 166, 33, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .chat_container::after {
@@ -149,4 +167,44 @@ a.subtitle {
 }
 #comment-text {
   margin: 20 10 20 10;
+}
+
+.flex {
+  display: flex;
+}
+.flex div {
+  flex: 1;
+  margin: 5px;
+}
+img {
+  width: 100%;
+}
+
+/* .container-image {
+  max-width: 25%;
+  max-height: 25%;
+} */
+
+.foodie-pic {
+  max-width: 100%;
+  max-width: 100%;
+  border-radius: #ffffff 2px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.foodie-image {
+  height: 300px;
+  width: 300px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#foodie-1 {
+  color: #ffffff;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  margin-left: auto;
+  margin-right: auto;
 }
