@@ -4,7 +4,7 @@ const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 // route to landing page
-router.get("/", withAuth, (req, res) => {
+router.get("/", (req, res) => {
 	if (req.session.loggedIn) {
 		res.render("landingpage", {
 			loggedIn: true,
