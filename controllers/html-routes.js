@@ -4,7 +4,13 @@ const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
 // route to landing page
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
+	if (req.session.loggedIn) {
+		res.render("landingpage", {
+			loggedIn: true,
+		});
+		return;
+	}
 	res.render("landingpage");
 });
 
@@ -104,6 +110,7 @@ router.get("/friends", withAuth, (req, res) => {
 	res.render("login");
 });
 
+// view privacy policy
 router.get("/privacy-policy", (req, res) => {
 	if (req.session.loggedIn) {
 		res.render("privacy-policy", {
