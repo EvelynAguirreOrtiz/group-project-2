@@ -76,16 +76,30 @@ div.polaroid {
 }
 
 p.title {
-  color: rgb(212, 83, 224);
+  color: rgb(189, 21, 205);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
-a.subtitle,
-h4.subtitle {
-  color: rgb(97, 97, 251);
+a.subtitle {
+  color: rgb(48, 48, 206);
   text-shadow: 0 0 10px rgba(227, 214, 198, 0.632);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bolder;
+}
+
+#foodie-1.label {
+  color: rgb(40, 120, 225);
+  text-shadow: 0 0 10px rgba(227, 214, 198, 0.632);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+}
+
+h4.subtitle {
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px rgba(227, 214, 198, 0.632);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  align-self: center;
 }
 
 #individual-post {
