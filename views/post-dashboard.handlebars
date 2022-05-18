@@ -1,0 +1,50 @@
+{{!-- New post creation page (requires login) --}}
+  <a href="/posts"> &larr; Back to Community Wall</a>
+
+<form class="new-post-form">
+<section class="container new-post-form">
+    <div class="field">
+      <label class="label" for="post-title">title:</label>
+      <p class="control has-icons-left">
+        <input
+          class="input is-link"
+          type="text"
+          id="post-title"
+          name="post-title"
+          placeholder="Finally have freetime! Let's hang"
+        />
+      </p>
+    </div>
+    <div class="field">
+      <label class="label" for="post-text">your post:</label>
+      <p class="control has-icons-left">
+        <textarea  class="textarea is-medium is-link post-text" name="post-text" id="post-text"></textarea>
+      </p>
+    </div>
+    <div class="field">
+      <p class="control">
+        <button type="submit" class="button new-post-form"> add post</button>
+      </p>
+    </div>
+</section>
+</form>
+
+{{#if posts.length}}
+
+<section class="container">
+  <div class="field">
+  <label class="label" for="post-text">your posts:</label>
+  </div>
+  <ol>
+    {{#each posts as |post|}}
+    <li>
+      {{> post-info post}}
+      <a href="/post-dashboard/edit/{{post.id}}" class="button edit-link">edit this post</a>
+    </li>
+    {{/each}}
+  </ol>
+  <br/>
+</section>
+{{/if}}
+
+<script src="/javascript/add-post.js"></script>

@@ -1,3 +1,4 @@
+// add new posts
 async function newFormHandler(event) {
 	event.preventDefault();
 
@@ -16,7 +17,7 @@ async function newFormHandler(event) {
 	});
 
 	if (response.ok) {
-		document.location.replace("/dashboard");
+		document.location.replace("/post-dashboard");
 	} else {
 		alert(response.statusText);
 	}

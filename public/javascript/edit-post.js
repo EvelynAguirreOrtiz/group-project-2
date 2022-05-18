@@ -1,3 +1,4 @@
+// edit post
 async function editFormHandler(event) {
 	event.preventDefault();
 
@@ -11,7 +12,6 @@ async function editFormHandler(event) {
 	const response = await fetch(`/api/posts/${id}`, {
 		method: "PUT",
 		body: JSON.stringify({
-			// title,
 			post_text,
 		}),
 		headers: {
@@ -20,7 +20,7 @@ async function editFormHandler(event) {
 	});
 
 	if (response.ok) {
-		document.location.replace("/dashboard/");
+		document.location.replace("/post-dashboard/");
 	} else {
 		alert(response.statusText);
 	}
