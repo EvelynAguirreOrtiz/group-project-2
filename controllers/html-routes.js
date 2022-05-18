@@ -3,17 +3,12 @@ const sequelize = require("../config/connection");
 const { Post, User, Comment } = require("../models");
 const withAuth = require("../utils/auth");
 
+// route to landing page
 router.get("/", (req, res) => {
-	// if (req.session.loggedIn) {
-	// 	res.render("landingpage", {
-	// 		loggedIn: true,
-	// 	});
-	// 	return;
-	// }
 	res.render("landingpage");
 });
 
-// get all posts for homepage
+// get all posts for community wall
 router.get("/posts", (req, res) => {
 	Post.findAll({
 		attributes: ["id", "post_text", "title", "created_at"],
@@ -87,12 +82,10 @@ router.get("/post/:id", (req, res) => {
 		});
 });
 
+// route to events/calendar page
 router.get("/events", withAuth, (req, res) => {
 	if (req.session.loggedIn) {
-		// res.render("events");
-		// return;
 		res.render("events", {
-			// post,
 			loggedIn: true,
 		});
 		return;
@@ -100,11 +93,10 @@ router.get("/events", withAuth, (req, res) => {
 	res.render("login");
 });
 
+// route to future chat feature
 router.get("/friends", withAuth, (req, res) => {
 	if (req.session.loggedIn) {
-		// res.render("friends");
 		res.render("friends", {
-			// post,
 			loggedIn: true,
 		});
 		return;
@@ -116,7 +108,7 @@ router.get("/privacy-policy", (req, res) => {
 	res.render("privacy-policy");
 });
 
-// make sure user is logged in
+// require user to be logged in
 router.get("/login", (req, res) => {
 	if (req.session.loggedIn) {
 		res.redirect("/");

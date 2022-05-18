@@ -1,3 +1,4 @@
+// create log in
 async function loginFormHandler(event) {
 	event.preventDefault();
 
@@ -22,6 +23,7 @@ async function loginFormHandler(event) {
 	}
 }
 
+// create sign in
 async function signupFormHandler(event) {
 	event.preventDefault();
 
@@ -41,7 +43,6 @@ async function signupFormHandler(event) {
 		});
 
 		if (response.ok) {
-			// document.location.replace("/dashboard/");
 			document.location.replace("/posts");
 		} else {
 			alert(response.statusText);

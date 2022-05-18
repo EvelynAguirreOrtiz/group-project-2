@@ -1,3 +1,4 @@
+// delete post
 async function deleteFormHandler(event) {
 	event.preventDefault();
 
@@ -9,7 +10,7 @@ async function deleteFormHandler(event) {
 	});
 
 	if (response.ok) {
-		document.location.replace("/dashboard/");
+		document.location.replace("/post-dashboard/");
 	} else {
 		alert(response.statusText);
 	}
