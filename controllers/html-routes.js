@@ -105,6 +105,12 @@ router.get("/friends", withAuth, (req, res) => {
 });
 
 router.get("/privacy-policy", (req, res) => {
+	if (req.session.loggedIn) {
+		res.render("privacy-policy", {
+			loggedIn: true,
+		});
+		return;
+	}
 	res.render("privacy-policy");
 });
 
